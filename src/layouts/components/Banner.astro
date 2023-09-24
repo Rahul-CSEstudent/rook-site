@@ -11,11 +11,11 @@ const { title, button, image, content } = banner;
       <div class="lg:col-6">
         <h1 class="banner-title" set:html={markdownify(title)} />
 
-        <p class="mt-6" set:html={markdownify(content)} />
+        <!-- <p class="mt-6" set:html={markdownify(content)} /> -->
 
         {
           button.enable && (
-            <a class="btn btn-white mt-8" href={button.link}>
+            <a class="btn btn-white mt-8 mb-8" href={button.link}>
               {button.label}
             </a>
           )
@@ -23,7 +23,7 @@ const { title, button, image, content } = banner;
       </div>
       <div class="lg:col-6">
         <Image
-          class="w-full object-contain"
+          class="w-full object-contain rounded-2xl"
           alt="banner"
           src={image}
           width={603}
