@@ -5,10 +5,10 @@ import dateFormat from "@lib/utils/dateFormat";
 import readingTime from "@lib/utils/readingTime";
 import { humanize, plainify, slugify } from "@lib/utils/textConverter";
 const { summary_length } = config.settings;
-const { posts } = Astro.props;
+const { posts, title } = Astro.props;
 ---
 
-<h2 class="h4 mb-4">Featured Posts</h2>
+<h2 class="h4 mb-4">{title ?? "Featured Posts"}</h2>
 <div class="featured-posts row">
   {
     posts.map((post: any) => (
